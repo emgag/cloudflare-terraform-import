@@ -4,8 +4,11 @@
 
 ## build & run
 
+Requires Go >= 1.11
+
 ```
-$ dep ensure -vendor-only && make
+$ git clone git@github.com:emgag/cloudflare-terraform-import.git
+$ go get && make
 $ export CF_API_EMAIL="user@example.org" 
 $ export CF_API_KEY="..."
 $ ./cti import example.org
