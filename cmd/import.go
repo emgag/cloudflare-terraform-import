@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/cloudflare/cloudflare-go"
 	"github.com/emgag/cloudflare-terraform-import/internal/lib/dns"
 	"github.com/spf13/cobra"
@@ -29,13 +30,13 @@ var importCmd = &cobra.Command{
 			log.Fatal(err)
 		}
 
-		tf, err := os.Create("import.tf")
+		tf, err := os.Create(fmt.Sprintf("import-%s.tf", args[0]))
 
 		if err != nil {
 			log.Fatal(err)
 		}
 
-		sh, err := os.Create("import.sh")
+		sh, err := os.Create(fmt.Sprintf("import-%s.sh", args[0]))
 
 		if err != nil {
 			log.Fatal(err)
