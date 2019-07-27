@@ -1,3 +1,5 @@
+**No longer maintained, there is [an official Cloudflare importer tool](https://github.com/cloudflare/cf-terraforming) to import existing resources into terraform.**
+
 # quick'n dirty cloudflare to terraform importer for DNS records
 
 (Only tested with A, CAA, CNAME, MX, TXT records so far) 
